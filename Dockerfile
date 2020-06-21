@@ -27,5 +27,8 @@ ENV LANG C.UTF-8
 RUN echo "export LC_ALL=C.UTF-8" >> ~/.profile
 RUN echo "export LANG=C.UTF-8" >> ~/.profile
 
+# Demo Source
+COPY index.html /var/www/html/
+
 EXPOSE 22
 CMD service ssh start && apache2-foreground
